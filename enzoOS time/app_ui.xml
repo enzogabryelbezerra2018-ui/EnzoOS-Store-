@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+    <theme>dark</theme>
+    <title>Enzo World Clock</title>
+
+    <!-- Tela de configuração inicial -->
+    <screen id="setup_screen" visible="true">
+        <label text="Selecione seu país / fuso horário:"/>
+        <combobox id="timezone_selector" placeholder="Escolha o país/fuso"/>
+        <button id="confirm_timezone" text="Confirmar"/>
+    </screen>
+
+    <!-- Tela principal do relógio -->
+    <screen id="main_screen" visible="false">
+        <label id="current_time_label" text="00:00:00"/>
+        <label id="current_country_label" text="País"/>
+        <listview id="world_clocks">
+            <!-- cada item: país + hora local -->
+            <item country="" time=""/>
+        </listview>
+        <button id="change_timezone" text="Alterar fuso"/>
+    </screen>
+
+</app>
